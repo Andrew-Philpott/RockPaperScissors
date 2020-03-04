@@ -40,6 +40,10 @@ namespace RockPaperScissors.Models
       {
         outcome = "One";
       }
+      else if (playerTwoChoice == 0 && playerOneChoice == 2)
+      {
+        outcome = "Two";
+      }
       return outcome;
     }
   }

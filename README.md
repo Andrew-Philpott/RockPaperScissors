@@ -35,6 +35,15 @@ This application is a console based RockPaperScissors game for 2 players or agai
   - Input: "Paper"
   - Output: 0
 
+- _Spec: The application should return One when player one's choice equals "Paper" and player two's choice equals "Rock"._
+
+  - Input: Player one: "Paper" Player two: "Rock"
+  - Output: One
+
+- _Spec: The application should return Two when player one's choice equals "Rock" and player two's choice equals "Paper"._
+  - Input: Player one: "Rock" Player two: "Paper"
+  - Output: Two
+
 ## Setup/Installation Requirements
 
 - Clone this repository.
