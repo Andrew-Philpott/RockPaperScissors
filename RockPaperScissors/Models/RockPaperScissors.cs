@@ -8,5 +8,10 @@ namespace RockPaperScissors.Models
       string winner = "Tie";
       return winner;
     }
+
+    public static int ConvertPlayerChoiceToNumber(string playerChoice)
+    {
+      return -1;
+    }
   }
 }
