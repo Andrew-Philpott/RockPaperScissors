@@ -37,5 +37,13 @@ namespace RockPaperScissors.Tests
       int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
       Assert.AreEqual(rockInt, answer);
     }
+    [TestMethod]
+    public void ConvertPlayerChoiceToNumber_ConvertsScissorsStringToOne_One()
+    {
+      int scissorsInt = 1;
+      string playerChoice = "Scissors";
+      int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
+      Assert.AreEqual(scissorsInt, answer);
+    }
   }
 }
