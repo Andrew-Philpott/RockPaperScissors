@@ -24,7 +24,7 @@ namespace RockPaperScissors.Tests
     public void ConvertPlayerChoiceToNumber_ConvertsInvalidChoiceSting_NegativeOne()
     {
       int invalidChoice = -1;
-      string playerChoice = "Rock";
+      string playerChoice = "Rck";
       int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
       Assert.AreEqual(invalidChoice, answer);
     }

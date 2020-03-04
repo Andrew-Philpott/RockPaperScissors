@@ -1,3 +1,4 @@
+using System;
 namespace RockPaperScissors.Models
 {
   public static class RockPaperScissorsGame
@@ -11,7 +12,18 @@ namespace RockPaperScissors.Models
 
     public static int ConvertPlayerChoiceToNumber(string playerChoice)
     {
-      return -1;
+      string playerChoiceLowerCase = playerChoice.ToLower();
+      int playerChoiceConvertedToInt;
+      switch (playerChoiceLowerCase)
+      {
+        case "rock":
+          playerChoiceConvertedToInt = 2;
+          break;
+        default:
+          playerChoiceConvertedToInt = -1;
+          break;
+      }
+      return playerChoiceConvertedToInt;
     }
   }
 }
