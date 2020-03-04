@@ -35,6 +35,11 @@ namespace RockPaperScissors.Models
     public static string GameResult(int playerOneChoice, int playerTwoChoice)
     {
       string outcome = "Tie";
+
+      if (playerOneChoice == 0 && playerTwoChoice == 2)
+      {
+        outcome = "One";
+      }
       return outcome;
     }
   }
