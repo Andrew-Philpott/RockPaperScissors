@@ -31,5 +31,11 @@ namespace RockPaperScissors.Models
       }
       return playerChoiceConvertedToInt;
     }
+
+    public static string GameResult(int playerOneChoice, int playerTwoChoice)
+    {
+      string outcome = "Tie";
+      return outcome;
+    }
   }
 }

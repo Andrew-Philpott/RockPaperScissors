@@ -11,16 +11,6 @@ namespace RockPaperScissors.Tests
   {
 
     [TestMethod]
-    public void DetermineWinner_ComparesTwoStrings_Tie()
-    {
-      string playerOneChoice = "Rock";
-      string playerTwoChoice = "Rock";
-      string tie = "Tie";
-      string answer = RockPaperScissorsGame.DetermineWinner(playerOneChoice, playerTwoChoice);
-      Assert.AreEqual(tie, answer);
-    }
-
-    [TestMethod]
     public void ConvertPlayerChoiceToNumber_ConvertsInvalidChoiceSting_NegativeOne()
     {
       int invalidChoice = -1;
@@ -53,6 +43,25 @@ namespace RockPaperScissors.Tests
       string playerChoice = "Paper";
       int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
       Assert.AreEqual(paperInt, answer);
+    }
+    [TestMethod]
+    public void GameResult_ReturnsStringTieAsDefault_Tie()
+    {
+      int playerOneChoice = 2;
+      int playerTwoChoice = 1;
+      string tie = "Tie";
+      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(tie, answer);
+    }
+
+    [TestMethod]
+    public void GameResult_ReturnsStringOneIfPlayerOnesChoiceEqualsZeroAndPlayerTwosChoiceEqulsTwo_One()
+    {
+      int playerOneChoice = 0;
+      int playerTwoChoice = 2;
+      string one = "One";
+      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(one, answer);
     }
   }
 }
