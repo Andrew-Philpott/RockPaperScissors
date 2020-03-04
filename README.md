@@ -10,10 +10,10 @@ This application is a console based RockPaperScissors game for 2 players or agai
 
 ## Specs
 
-- _Spec: ._
+- _Spec: The application should return "Tie" when the players choices match_
 
-  - Input:
-  - Output:
+  - Input: "Rock" "Rock"
+  - Output: "Tie"
 
 ## Setup/Installation Requirements
 
