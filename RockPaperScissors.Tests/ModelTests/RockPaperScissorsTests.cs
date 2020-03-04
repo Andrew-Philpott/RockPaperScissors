@@ -63,5 +63,14 @@ namespace RockPaperScissors.Tests
       string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
       Assert.AreEqual(one, answer);
     }
+    [TestMethod]
+    public void GameResult_ReturnsStringTwoIfPlayerTwosChoiceEqualsZeroAndPlayerOnesChoiceEqulsTwo_Two()
+    {
+      int playerOneChoice = 2;
+      int playerTwoChoice = 0;
+      string two = "Two";
+      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(two, answer);
+    }
   }
 }
