@@ -21,12 +21,21 @@ namespace RockPaperScissors.Tests
     }
 
     [TestMethod]
-    public void ConvertPlayerChoiceToNumber_ConvertsInvalidChoce_NegativeOne()
+    public void ConvertPlayerChoiceToNumber_ConvertsInvalidChoiceSting_NegativeOne()
     {
       int invalidChoice = -1;
       string playerChoice = "Rock";
       int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
       Assert.AreEqual(invalidChoice, answer);
+    }
+
+    [TestMethod]
+    public void ConvertPlayerChoiceToNumber_ConvertsRockStringToTwo_Two()
+    {
+      int rockInt = 2;
+      string playerChoice = "Rock";
+      int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
+      Assert.AreEqual(rockInt, answer);
     }
   }
 }
