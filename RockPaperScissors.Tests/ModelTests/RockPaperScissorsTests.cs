@@ -45,31 +45,51 @@ namespace RockPaperScissors.Tests
       Assert.AreEqual(paperInt, answer);
     }
     [TestMethod]
-    public void GameResult_ReturnsStringTieAsDefault_Tie()
+    public void GameResult_ReturnsStringDrawAsDefaultInt_Zero()
     {
       int playerOneChoice = 2;
-      int playerTwoChoice = 1;
-      string tie = "Tie";
-      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
-      Assert.AreEqual(tie, answer);
+      int playerTwoChoice = 2;
+      int draw = 0;
+      int answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(draw, answer);
     }
 
     [TestMethod]
-    public void GameResult_ReturnsStringOneIfPlayerOnesChoiceEqualsZeroAndPlayerTwosChoiceEqulsTwo_One()
+    public void GameResult_ReturnIntOneIfPlayerOnesChoiceEqualsZeroAndPlayerTwosChoiceEqualsIntTwo_One()
     {
       int playerOneChoice = 0;
       int playerTwoChoice = 2;
-      string one = "One";
-      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      int one = 1;
+      int answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
       Assert.AreEqual(one, answer);
     }
     [TestMethod]
-    public void GameResult_ReturnsStringTwoIfPlayerTwosChoiceEqualsZeroAndPlayerOnesChoiceEqulsTwo_Two()
+    public void GameResult_ReturnsIntTwoIfPlayerTwosChoiceEqualsIntZeroAndPlayerOnesChoiceEqulsIntTwo_Two()
     {
       int playerOneChoice = 2;
       int playerTwoChoice = 0;
-      string two = "Two";
-      string answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      int two = 2;
+      int answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(two, answer);
+    }
+
+    [TestMethod]
+    public void GameResult_ReturnsIntOneWhenPlayerOnesChoiceIsGreaterThanPlayerTwosChoice_One()
+    {
+      int playerOneChoice = 2;
+      int playerTwoChoice = 1;
+      int one = 1;
+      int answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
+      Assert.AreEqual(one, answer);
+    }
+
+    [TestMethod]
+    public void GameResult_ReturnsIntTwoWhenPlayerTwosChoiceIsGreaterThanPlayerOnesChoice_Two()
+    {
+      int playerOneChoice = 1;
+      int playerTwoChoice = 2;
+      int two = 2;
+      int answer = RockPaperScissorsGame.GameResult(playerOneChoice, playerTwoChoice);
       Assert.AreEqual(two, answer);
     }
   }

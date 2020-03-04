@@ -6,7 +6,7 @@ namespace RockPaperScissors.Models
 
     public static string DetermineWinner(string playerOneAnswer, string playerTwoAnswer)
     {
-      string winner = "Tie";
+      string winner = "Draw";
       return winner;
     }
 
@@ -32,18 +32,27 @@ namespace RockPaperScissors.Models
       return playerChoiceConvertedToInt;
     }
 
-    public static string GameResult(int playerOneChoice, int playerTwoChoice)
+    public static int GameResult(int playerOneChoice, int playerTwoChoice)
     {
-      string outcome = "Tie";
+      int outcome = 0;
 
       if (playerOneChoice == 0 && playerTwoChoice == 2)
       {
-        outcome = "One";
+        outcome = 1;
       }
       else if (playerTwoChoice == 0 && playerOneChoice == 2)
       {
-        outcome = "Two";
+        outcome = 2;
       }
+      else if (playerOneChoice > playerTwoChoice)
+      {
+        outcome = 1;
+      }
+      else if (playerTwoChoice > playerOneChoice)
+      {
+        outcome = 2;
+      }
+
       return outcome;
     }
   }

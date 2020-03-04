@@ -10,10 +10,10 @@ This application is a console based RockPaperScissors game for 2 players or agai
 
 ## Specs
 
-- _Spec: The application should return "Tie" when the players choices match_
+- _Spec: The application should return "Draw" when the players choices match_
 
   - Input: "Rock" "Rock"
-  - Output: "Tie"
+  - Output: "Draw"
 
 - _Spec: The application should return -1 when a players choice isnt "Rock", "Scissors", or "Paper."_
 
@@ -35,14 +35,24 @@ This application is a console based RockPaperScissors game for 2 players or agai
   - Input: "Paper"
   - Output: 0
 
-- _Spec: The application should return One when player one's choice equals "Paper" and player two's choice equals "Rock"._
+- _Spec: The application should return "Player 1" when player one's choice equals "Paper" and player two's choice equals "Rock"._
 
   - Input: Player one: "Paper" Player two: "Rock"
-  - Output: One
+  - Output: "Player 1"
 
-- _Spec: The application should return Two when player one's choice equals "Rock" and player two's choice equals "Paper"._
+- _Spec: The application should return "Player 2" when player one's choice equals "Rock" and player two's choice equals "Paper"._
+
   - Input: Player one: "Rock" Player two: "Paper"
-  - Output: Two
+  - Output: "Player 2"
+
+- _Spec: The application should return "Player 1" when player one's choice is greater than player two's choice and player one's choice doesn't equal "Rock" and player two's choice doesn't equal "Paper"._
+
+  - Input: Player one: "Rock" Player two: "Scissors"
+  - Output: "Player 1"
+
+- _Spec: The application should return "Player 2" when player two's choice is greater than player one's choice and player two's choice doesn't equal "Rock" and player ones's choice doesn't equal "Paper"._
+  - Input: Player one: "Scissors" Player Two: "Rock"
+  - Output: "Player 2"
 
 ## Setup/Installation Requirements
 
