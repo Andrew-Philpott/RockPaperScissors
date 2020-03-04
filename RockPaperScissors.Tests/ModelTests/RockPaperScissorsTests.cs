@@ -45,5 +45,14 @@ namespace RockPaperScissors.Tests
       int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
       Assert.AreEqual(scissorsInt, answer);
     }
+
+    [TestMethod]
+    public void ConvertPlayerChoiceToNumber_ConvertsPaperStringToZero_Zero()
+    {
+      int paperInt = 0;
+      string playerChoice = "Paper";
+      int answer = RockPaperScissorsGame.ConvertPlayerChoiceToNumber(playerChoice);
+      Assert.AreEqual(paperInt, answer);
+    }
   }
 }
