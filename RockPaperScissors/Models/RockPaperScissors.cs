@@ -19,6 +19,9 @@ namespace RockPaperScissors.Models
         case "rock":
           playerChoiceConvertedToInt = 2;
           break;
+        case "scissors":
+          playerChoiceConvertedToInt = 1;
+          break;
         default:
           playerChoiceConvertedToInt = -1;
           break;
